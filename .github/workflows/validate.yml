@@ -1,0 +1,13 @@
+name: Performance test pre-released Docker image
+
+on:
+  registry_package:
+    types:
+      - published
+
+jobs:
+  performance-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Confirm release
+        uses: softprops/action-gh-release@v1
